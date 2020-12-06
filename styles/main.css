@@ -1,0 +1,270 @@
+:root {
+  --color: #3b3b3b;
+  --icons: #ff9671;
+  --bg: #ffffff;
+  --bg2: #d8cfcf;
+  --sbg: #ff00e9;
+  --bg3: #2b2828;
+  --color2: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  background-color: var(--bg);
+  box-shadow: 2px 2px 2px var(--bg2), -2px -2px 2px var(--bg2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.music-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  background-color: var(--bg);
+  border: 3px solid var(--sbg);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.album {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: var(--bg2);
+  height: 240px;
+  width: 250px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Jarofhearts.jpg/220px-Jarofhearts.jpg");
+}
+
+.album-cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 240px;
+  width: 250px;
+  background-color: var(--sbg);
+  transition: all 1s;
+}
+
+.album-cover h1 {
+  text-align: center;
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  bottom: 0;
+  margin: auto;
+}
+
+.album-cover p {
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+  bottom: 0;
+  margin: auto;
+}
+
+.music-controls {
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: var(--bg3);
+  margin-top: 150px;
+}
+
+.music-progress-bar {
+  position: absolute;
+  left: -7px;
+  right: 0;
+  top: -206px;
+  bottom: 0;
+  margin: auto;
+  height: 245px;
+  width: 245px;
+  border: 10px solid var(--icons);
+  border-radius: 50%;
+}
+
+.music-controls-buttons {
+  position: absolute;
+  left: 5px;
+  right: 0;
+  top: -50px;
+  bottom: 0;
+  margin: auto;
+  width: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.music-controls-design {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 120px;
+  width: 135px;
+  background-color: var(--bg3);
+  margin-top: 110px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.play {
+  font-size: 1.5em;
+  color: var(--sbg);
+}
+
+.music-title {
+  position: absolute;
+  left: -1000px;
+  right: 0;
+  top: 80px;
+  bottom: 0;
+  margin: auto;
+  font-size: 1em;
+  text-align: center;
+  color: var(--bg);
+  transition: all 1s;
+}
+
+.music-artist {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 300px;
+  bottom: 0;
+  margin: auto;
+  font-size: 1em;
+  text-align: center;
+  color: var(--sbg);
+  transition: all 1s;
+}
+
+.music-range {
+  position: absolute;
+  left: 5px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  margin: auto;
+  width: 90px;
+  height: 15px;
+  background-color: var(--color);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.7em;
+  color: var(--bg);
+}
+
+.design {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 700px;
+  width: 400px;
+  background-color: var(--color2);
+  transform: rotate(40deg);
+}
+
+.share {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 1.5em;
+  color: var(--color);
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.download {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.5em;
+  color: var(--color);
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+/* 
+now we are done with the designs let add some hovers.....to make is awesome */
+
+.music-container:hover > .album-cover {
+  top: 300px;
+}
+
+/* we didnt see the results... cause it display is none... so let remove that */
+
+.music-controls-design:hover > .music-artist {
+  top: 100px;
+}
+/* let also change the top of the music-artist */
+
+.music-controls-design:hover .music-title {
+  left: 0px;
+}
+/* 
+let add some designs to make it more cool */
+
+.container:hover {
+  background-color: var(--sbg);
+}
+
+/* let add share and download buttons */
+/* let add some hovers */
+
+.container:hover > .share {
+  color: var(--bg);
+  transform: rotate(360deg);
+}
+
+.container:hover > .download {
+  color: var(--bg);
+  transform: rotate(360deg);
+}
+
+/* we are done now let add the music image......... */
+
+/* coool.... now we are done with our ui .. there is much you do with this ui....
+you can add jquery to make the hover work like animation... also you can add music to it */
